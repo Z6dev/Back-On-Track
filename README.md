@@ -19,4 +19,11 @@ cd Back-On-Track
 go mod tidy
 go run .
 ```
-    
+
+## Building  
+To build This program, you need to install [Go](https://go.dev/dl/).  
+
+Then run this command:  
+```bash
+go build -o b-track .
+```

@@ -26,6 +26,7 @@ func main() {
 	case "help":
 		fmt.Println("Placeholder help")
 
+	/*------------------ Listing command -----------------------*/
 	case "list":
 		if len(todolist) == 0 {
 			fmt.Println("Todo-list empty")
@@ -43,6 +44,7 @@ func main() {
 			fmt.Println("______________________________")
 		}
 
+	/*------------ Base Commands ------------- */
 	case "add":
 		todolist = append(todolist, structs.TODO{
 			Id:          len(todolist),
@@ -60,5 +62,16 @@ func main() {
 
 		todolist = slices.Delete(todolist, index, index+1)
 		todoutils.SaveTodos(filePath, todolist)
+
+	case "update":
+		index, err := strconv.Atoi(os.Args[2])
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		todolist[index].Description = os.Args[3]
+		todoutils.SaveTodos(filePath, todolist)
+
+		/*--------------- mark commands --------------- */
 	}
 }

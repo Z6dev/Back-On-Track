@@ -1,8 +1,9 @@
 
 # Back-On-Track
 
-A Simple Task Tracker CLI I made just for fun.  
-It has no use cases
+A Simple Task Tracker CLI I made just for roadmap.sh project.   
+[Check the project roadmap](https://roadmap.sh/projects/task-tracker)
+It has no use cases.  
 
 
 ## Installation
